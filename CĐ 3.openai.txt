@@ -1,0 +1,13 @@
+import openai
+openai.api_key = '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'
+completion = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[{"role": "user", "content": "Hãy đề xuất 5 chủ đề tiểu luận cho môn học git và github"}]
+)
+print(completion['choices'][0]['message']['content'])
+
+1. "Sự phát triển và ưu điểm của Git và GitHub trong quản lý phiên bản mã nguồn mở phần mềm".
+2. "Các thao tác cơ bản với Git và GitHub trong quản lý dự án lớn".
+3. "Sử dụng Git và GitHub trong quản lý các dự án tuyệt đối an toàn và bảo mật".
+4. "Giới thiệu về một số công cụ hỗ trợ tốt cho quản lý dự án với Git và GitHub".
+5. "Các cách phân biệt Git và GitHub và sự khác nhau giữa chúng trong quản lý mã nguồn".
